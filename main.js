@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
         nightMode = 'false';
     }
 
+
+
     applyNightMode(nightMode);
 
     document.getElementById('night-mode-toggle').addEventListener('click', () => {
@@ -26,8 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+footer = document.getElementsByTagName('footer')[0]
+
+
 function applyNightMode(nightMode) {
     document.body.classList.toggle("night-mode", nightMode === 'true');
+    footer.classList.toggle('night-mode-footer', nightMode === 'true')
 }
 
 document.addEventListener('DOMContentLoaded', () => {
