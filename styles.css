@@ -116,15 +116,15 @@ nav ul li a:hover {
 }
 
 #profile-image {
-    
     width: 250px;
     height: auto;
     border-radius: 5px;
     margin-left: 20px; 
     transition: transform 0.3s ease-in-out;
     border: 5px solid #3498db; 
-    box-shadow: 0 0 5px rgba(8, 46, 71, 0.5); 
+    box-shadow: 0 0 5px rgb(8 46 71 / 50%); 
 }
+
 #profile-image:hover {
     transform: scale(1.2); 
 }
@@ -132,6 +132,7 @@ nav ul li a:hover {
 #contact-info h2 {
     color: blue;
 }   
+
 #education h2 {
     margin-top: -60px;
     color: blue;    
@@ -155,17 +156,19 @@ nav ul li a:hover {
     padding: 10px; 
     border-radius: 5px; 
     display: inline-block; 
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); 
+    box-shadow: 0 0 5px rgb(52 152 219 / 50%); 
 }
+
 #visit-info {
-    
    size: 0.1px; 
    
      
 }
+
 #education {
     margin-top: auto;
 }
+
 .languages {
     border: 1px solid #ccc; 
     padding: 10px; 
@@ -175,9 +178,11 @@ nav ul li a:hover {
 .languages p {
     margin: 0; 
 }
+
 #project-details h2{
     color: blue     ;
 }
+
 #first {
 margin-top: -250px;
 text-align: left;
@@ -185,6 +190,7 @@ font-weight: bolder;
 color: brown;
 font-size: 23px;
 }
+
 #time{
     text-align: right;
     color: green;
@@ -200,7 +206,7 @@ body {
     top: 20px;
     right: 20px;
     background-color: #4caf50;
-    color: #ffffff;
+    color: #fff;
     padding: 10px 20px;
     cursor: pointer;
     border: none;
@@ -210,7 +216,7 @@ body {
 
 body.night-mode {
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #fff;
 }
 
 .night-mode-footer {
