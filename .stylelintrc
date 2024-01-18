@@ -1,6 +1,0 @@
-{
-  "extends": "stylelint-config-standard",
-  "rules": {
-    "block-opening-brace-space-before": ["always", { "except": ["first-nested"] }]
-  }
-}
