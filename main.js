@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const page = urlParams.get('page');
-  if (page === 'projects') {
-    const projectDetailsSection = document.getElementById('project-details');
-    projectDetailsSection.innerHTML += '<p>Additional content for projects page.</p>';
-  }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   let nightMode = localStorage.getItem('nightMode') === 'true'; 
 
@@ -17,19 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     applyNightMode(nightMode);
     localStorage.setItem('nightMode', nightMode);
   });
-});
 
-const footer = document.getElementsByTagName('footer')[0];
+  const currentYearElement = document.getElementById('current-year');
+  const currentYear = new Date().getFullYear();
+  currentYearElement.textContent = currentYear;
 
-function applyNightMode(nightMode) {
-  document.body.classList.toggle('night-mode', nightMode);
-  footer.classList.toggle('night-mode-footer', nightMode);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
   displayCurrentDateTime();
   setInterval(displayCurrentDateTime, 1000);
 });
+
+function applyNightMode(nightMode) {
+  document.body.classList.toggle('night-mode', nightMode);
+  document.getElementsByTagName('footer')[0].classList.toggle('night-mode-footer', nightMode);
+}
 
 function displayCurrentDateTime() {
   const dateTimeContainer = document.getElementById('current-date-time');
