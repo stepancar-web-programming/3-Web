@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const urlParams = new URLSearchParams(window.location.search);
   const page = urlParams.get('page');
@@ -7,36 +6,28 @@ document.addEventListener('DOMContentLoaded', function () {
     projectDetailsSection.innerHTML += '<p>Additional content for projects page.</p>';
   }
 });
+
 document.addEventListener('DOMContentLoaded', () => {
-  let nightMode = localStorage.getItem('nightMode');
-  if (nightMode === null) {
-    nightMode = 'false';
-  }
-
-
+  let nightMode = localStorage.getItem('nightMode') === 'true'; 
 
   applyNightMode(nightMode);
 
   document.getElementById('night-mode-toggle').addEventListener('click', () => {
-    nightMode = (nightMode === 'true') ? 'false' : 'true';
+    nightMode = !nightMode; 
     applyNightMode(nightMode);
     localStorage.setItem('nightMode', nightMode);
   });
 });
 
-footer = document.getElementsByTagName('footer')[0];
-
+const footer = document.getElementsByTagName('footer')[0];
 
 function applyNightMode(nightMode) {
-  document.body.classList.toggle('night-mode', nightMode === 'true');
-  footer.classList.toggle('night-mode-footer', nightMode === 'true');
+  document.body.classList.toggle('night-mode', nightMode);
+  footer.classList.toggle('night-mode-footer', nightMode);
 }
-  
 
 document.addEventListener('DOMContentLoaded', () => {
-
   displayCurrentDateTime();
-
   setInterval(displayCurrentDateTime, 1000);
 });
 
