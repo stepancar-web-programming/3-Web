@@ -4,12 +4,13 @@
     "node": ">=16.17.0"
   },
   "scripts": {
-    "lint": "eslint . && htmlhint **/*.html",
+    "lint": "eslint . && htmlhint **/*.html && prettier --write '**/*.css'",
     "existing-script": "existing command"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
     "htmlhint": "^1.1.4",
+    "prettier": "^3.2.4",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0",
     "stylelint-config-standard-scss": "^13.0.0",
