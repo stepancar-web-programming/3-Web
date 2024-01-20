@@ -188,7 +188,7 @@ nav ul li a:hover {
   font-size: 23px;
 }
 
-#time {
+.time {
   text-align: right;
   color: green;
   font-size: 23px;
