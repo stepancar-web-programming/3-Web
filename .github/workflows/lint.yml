@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.6'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint, HTMLHint, and Prettier
+        run: npm run lint
