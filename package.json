@@ -4,8 +4,7 @@
     "node": ">=20.6.0"
   },
   "scripts": {
-    "lint": "eslint . && htmlhint **/*.html && prettier --write '**/*.css'",
-    "existing-script": "existing command"
+    "lint": "eslint . && htmlhint **/*.html && prettier --write '**/*.css'"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
